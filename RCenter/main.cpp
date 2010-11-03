@@ -15,6 +15,7 @@
 
 int main(int argc, char *argv[])
 {
+    //pc git
     QApplication a(argc, argv);
     //QTextCodec::setCodecForLocale(QTextCodec::codecForLocale());
     QTextCodec::setCodecForCStrings(QTextCodec::codecForName("C-UTF-8"));
