@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 {
 
 
-    //laptop git
+    //pc git
 
     QApplication a(argc, argv);
     //QTextCodec::setCodecForLocale(QTextCodec::codecForLocale());
