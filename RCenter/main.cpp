@@ -15,6 +15,7 @@
 
 int main(int argc, char *argv[])
 {
+    //привет git
     QApplication a(argc, argv);
     //QTextCodec::setCodecForLocale(QTextCodec::codecForLocale());
     //QTextCodec::setCodecForCStrings(QTextCodec::codecForName("C-UTF-8"));
@@ -26,7 +27,7 @@ int main(int argc, char *argv[])
     QSqlDatabase db;
     db=db.addDatabase("QODBC");
     //db.setDatabaseName("d:\\base.mdb");548
-    db.setDatabaseName("DRIVER={MS Access Driver (*.mdb)};DBQ=D:\\base.accdb");
+    db.setDatabaseName("DRIVER={MS Access Driver (*.mdb, *)};DBQ=D:\\base.accdb");
     db.driverName();
     if (!db.open())
     {
