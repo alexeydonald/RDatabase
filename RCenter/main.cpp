@@ -15,10 +15,16 @@
 
 int main(int argc, char *argv[])
 {
+<<<<<<< HEAD
     //привет git
     QApplication a(argc, argv);
     //QTextCodec::setCodecForLocale(QTextCodec::codecForLocale());
     //QTextCodec::setCodecForCStrings(QTextCodec::codecForName("C-UTF-8"));
+=======
+    QApplication a(argc, argv);
+    //QTextCodec::setCodecForLocale(QTextCodec::codecForLocale());
+    QTextCodec::setCodecForCStrings(QTextCodec::codecForName("C-UTF-8"));
+>>>>>>> 1042b87a135b93697b9b1cca1016216c9f5644e7
    setlocale(LC_ALL,"C-UTF-8");
     MainWindow w;
     w.show();
@@ -27,7 +33,11 @@ int main(int argc, char *argv[])
     QSqlDatabase db;
     db=db.addDatabase("QODBC");
     //db.setDatabaseName("d:\\base.mdb");548
+<<<<<<< HEAD
     db.setDatabaseName("DRIVER={MS Access Driver (*.mdb, *)};DBQ=D:\\base.accdb");
+=======
+    db.setDatabaseName("DRIVER={MS Access Driver (*.mdb)};DBQ=D:\\base.accdb");
+>>>>>>> 1042b87a135b93697b9b1cca1016216c9f5644e7
     db.driverName();
     if (!db.open())
     {
