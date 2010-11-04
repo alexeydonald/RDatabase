@@ -32,9 +32,7 @@ int main(int argc, char *argv[])
     QStringList drivers = QSqlDatabase::drivers();
     QSqlDatabase db;
     db=db.addDatabase("QODBC");
-    //db.setDatabaseName("d:\\base.mdb");548
-
-    db.setDatabaseName("DRIVER={MS Access Driver (*.mdb, *.accdb)};DBQ=D:\\base.accdb");
+    db.setDatabaseName("DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=D:\\base.accdb");
 
     db.driverName();
     if (!db.open())
