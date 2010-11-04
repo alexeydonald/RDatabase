@@ -16,26 +16,20 @@
 int main(int argc, char *argv[])
 {
 
-
-
-    //pc git 1.2
-
-
     QApplication a(argc, argv);
     //QTextCodec::setCodecForLocale(QTextCodec::codecForLocale());
     QTextCodec::setCodecForCStrings(QTextCodec::codecForName("C-UTF-8"));
 
-   setlocale(LC_ALL,"C-UTF-8");
+   //setlocale(LC_ALL,"C-UTF-8");
     MainWindow w;
     w.show();
   QMessageBox m;
     QStringList drivers = QSqlDatabase::drivers();
-    QSqlDatabase db;
-    db=db.addDatabase("QODBC");
+    QSqlDatabase db=QSqlDatabase::addDatabase("QODBC");
     //db.setDatabaseName("d:\\base.mdb");548
 
-    db.setDatabaseName("DRIVER={MS Access Driver (*.mdb, *.accdb)};DBQ=D:\\base.accdb");
-
+   //db.setDatabaseName("DRIVER={MS Access Driver (*.mdb, *.accdb)};DBQ=D:\\base.accdb");
+  db.setDatabaseName(":memory:");
     db.driverName();
     if (!db.open())
     {
