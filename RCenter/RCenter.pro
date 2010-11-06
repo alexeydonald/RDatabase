@@ -1,11 +1,10 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2010-10-30T02:53:57
+# Project created by QtCreator 2010-11-06T14:52:37
 #
 #-------------------------------------------------
 
-QT       += core gui
-QT       += sql
+QT       += core gui sql
 
 TARGET = RCenter
 TEMPLATE = app
